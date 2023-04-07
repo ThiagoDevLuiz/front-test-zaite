@@ -6,9 +6,10 @@
 }
 
 body {
-  width: 70%;
+  width: 75%;
   margin: auto;
   font-family: "FutuLt";
+  background-color: #fff;
 }
 
 @font-face {
