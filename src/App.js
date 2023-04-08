@@ -1,13 +1,13 @@
 import './App.css';
+import Carousel from './components/Carousel';
 import Header from './components/Header';
-import CarouselPai from './components/Carousel/CarouselPai';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <main>
-        <CarouselPai />
+        <Carousel />
       </main>
     </div>
   );
