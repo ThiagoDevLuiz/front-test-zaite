@@ -2,6 +2,7 @@ import './App.css';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
 import Texto from './components/Texto';
+import News from './components/News';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Carousel />
         <Texto />
+        <News />
       </main>
     </div>
   );
