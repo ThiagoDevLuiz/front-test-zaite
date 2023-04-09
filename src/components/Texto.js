@@ -19,11 +19,11 @@ export default Texto;
 
 const TextContainer = styled.div`
   width: 85%;
-  margin: 40px auto 20px auto;
+  margin: 40px auto;
 `
 
 const TextZaite = styled.p`
-  color: #6a6b70ee;
+  color: #6a6b70f5;
   text-align: center;
   font-size: 18px;
 `

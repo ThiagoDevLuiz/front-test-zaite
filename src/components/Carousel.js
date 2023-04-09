@@ -77,6 +77,7 @@ const Image = styled.img`
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ isTransitioning }) => isTransitioning ? 0 : 1};
   filter: brightness(60%);
+  object-fit: cover;
 `;
 
 const Overlay = styled.div`
