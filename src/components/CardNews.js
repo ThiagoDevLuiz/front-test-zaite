@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ImgNews from '../assets/Images/noticia.jpg';
-
 const CardNews = props => {
   return (
     <ContainerCard>
-      <Foto src={ImgNews} alt="Imagem notícia" width="100%" />
+      <Foto src={props.image} alt="Imagem notícia" />
       <Data>{props.data}</Data>
-      <Descricao>
-        Alta demanda por programadores em diversas áreas como front-end e
-        back-end, especialmente para habilidades em JavaScript, React, PHP.
-      </Descricao>
+      <Descricao>{props.desc}</Descricao>
     </ContainerCard>
   );
 };
@@ -22,23 +17,27 @@ const ContainerCard = styled.div`
   width: 30%;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
-  
+
   :hover {
-    background-color: #d7d7d744;
+    background-color: #d7d7d752;
     border-radius: 7px;
   }
 `;
 
 const Foto = styled.img`
   border-radius: 7px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 `;
 
 const Data = styled.h3`
   color: #007832;
-  margin: 3px 0 10px 0;
+  margin: 3px 0 10px 5px;
 `;
 
 const Descricao = styled.p`
   color: #4a4b4ee1;
   text-align: left;
+  margin: 0 0 5px 5px;
 `;
