@@ -33,11 +33,13 @@ const Carousel = () => {
   return (
     <CarouselWrapper>
       <ImageWrapper> 
-        <Image
-          src={images[currentImageIndex].src}
-          alt={images[currentImageIndex].alt}
-          isTransitioning={isTransitioning}
-        />
+        <Overlay>  
+          <Image
+            src={images[currentImageIndex].src}
+            alt={images[currentImageIndex].alt}
+            isTransitioning={isTransitioning}
+          />
+        </Overlay>
         <Caption>{images[currentImageIndex].caption}</Caption>
       </ImageWrapper>   
       <BallList>
@@ -65,16 +67,25 @@ const CarouselWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
+  height: 400px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 10px;
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ isTransitioning }) => isTransitioning ? 0 : 1};
-  filter: brightness(70%);
+  filter: brightness(60%);
 `;
+
+const Overlay = styled.div`
+  background-color: #007832b7;
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+`
 
 const Caption = styled.div`
   position: absolute;
