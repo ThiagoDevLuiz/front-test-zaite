@@ -72,7 +72,7 @@ const Nav = styled.nav`
 `;
 
 const Hr = styled.hr`
-  width: 100vw;
+  width: 100%;
   margin: auto;
   position: absolute;
   border: none;
