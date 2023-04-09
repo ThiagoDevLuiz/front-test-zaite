@@ -1,6 +1,7 @@
 import './App.css';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
+import Texto from './components/Texto';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <Carousel />
+        <Texto />
       </main>
     </div>
   );
