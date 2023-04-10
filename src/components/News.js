@@ -10,9 +10,9 @@ const News = () => {
     <NewsContainer>
       <Title>NOTÍCIAS</Title>
       <ListNews>
-        <CardNews data="20/03/23" desc={descNews1} image={image1} />
-        <CardNews data="22/03/23" desc={descNews2} image={image2} />
-        <CardNews data="25/03/23" desc={descNews3} image={image3} />
+        <CardNews date="20/03/23" desc={descNews1} image={image1} />
+        <CardNews date="22/03/23" desc={descNews2} image={image2} />
+        <CardNews date="25/03/23" desc={descNews3} image={image3} />
       </ListNews>
     </NewsContainer>
   );

@@ -14,7 +14,7 @@ const Footer = () => {
             da Zaite:
           </p>
           <Input type="email" placeholder="E-mail" />
-          <ComandoReceber href="#">Receber NEWSLETTER</ComandoReceber>
+          <CommandReceive href="#">Receber NEWSLETTER</CommandReceive>
         </Newsletter>
         <Location>
           <p>
@@ -39,12 +39,12 @@ const Hr = styled.hr`
   border: none;
   height: 1px;
   background-color: #6666663a;
+  margin: 50px 0 10px 0;
 `;
 
 const FooterContainer = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 10px;
   justify-content: space-between;
   color: #606166fd;
 `;
@@ -63,7 +63,7 @@ const Input = styled.input`
   opacity: 0.5;
 `;
 
-const ComandoReceber = styled.a`
+const CommandReceive = styled.a`
   color: #007832;
   font-weight: bold;
 `;

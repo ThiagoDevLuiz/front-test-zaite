@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const CardNews = props => {
   return (
     <ContainerCard>
-      <Foto src={props.image} alt="Imagem notícia" />
-      <Data>{props.data}</Data>
-      <Descricao>{props.desc}</Descricao>
+      <Photo src={props.image} alt="Imagem notícia" />
+      <Date>{props.date}</Date>
+      <Description>{props.desc}</Description>
     </ContainerCard>
   );
 };
@@ -24,19 +24,19 @@ const ContainerCard = styled.div`
   }
 `;
 
-const Foto = styled.img`
+const Photo = styled.img`
   border-radius: 7px;
   width: 100%;
   height: 250px;
   object-fit: cover;
 `;
 
-const Data = styled.h3`
+const Date = styled.h3`
   color: #007832;
   margin: 3px 0 10px 5px;
 `;
 
-const Descricao = styled.p`
+const Description = styled.p`
   color: #4a4b4ee1;
   text-align: left;
   margin: 0 0 5px 5px;
