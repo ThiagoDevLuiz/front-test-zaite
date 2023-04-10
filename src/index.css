@@ -5,13 +5,6 @@
   outline: 0;
 }
 
-body {
-  width: 70%;
-  margin: auto;
-  font-family: "FutuLt";
-  background-color: #fff;
-}
-
 @font-face {
   font-family: "FutuLt";
   src: url(assets/Fonts/FutuLt.ttf);
@@ -20,4 +13,17 @@ body {
 @font-face {
   font-family: "FutuLtIt";
   src: url(assets/Fonts/FutuLtIt.ttf);
+}
+
+body {
+  width: 70%;
+  margin: auto;
+  font-family: "FutuLt";
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1025px) {
+  body {
+    width: 90%;
+  }
 }

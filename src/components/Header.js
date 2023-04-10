@@ -1,10 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Logo from '../assets/Images/logo1.png';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
       <HeaderContainer>
@@ -13,7 +21,10 @@ const Header = () => {
             <img src={Logo} alt="Logo Zaite" width="200px" />
           </a>
         </LogoContainer>
-        <Nav>
+        <HamburgerMenu onClick={handleMenuClick}>
+          <FontAwesomeIcon icon={faBars} size="2x" />
+        </HamburgerMenu>
+        <Nav isMenuOpen={isMenuOpen}>
           <ul>
             <li><a href="#">A Empresa</a></li>
             <li><a href="#">Soluções</a></li>
@@ -37,6 +48,13 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 110px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -47,11 +65,25 @@ const Nav = styled.nav`
   ul {
     display: flex;
     list-style: none;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: ${({ isMenuOpen }) => (isMenuOpen ? 'auto' : 0)};
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+    }
   }
 
   li {
     margin-right: 20px;
     transition: transform 0.4s;
+
+    @media (max-width: 768px) {
+      margin: 10px 0;
+    }
   }
 
   li:hover {
@@ -68,6 +100,26 @@ const Nav = styled.nav`
 
   a:hover {
     color: #007832;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
+`;
+
+const HamburgerMenu = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
+
+    svg {
+      color: #007832;
+    }
   }
 `;
 

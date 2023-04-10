@@ -14,12 +14,12 @@ const CardNews = props => {
 export default CardNews;
 
 const ContainerCard = styled.div`
-  width: 30%;
+  width: 100%;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 
   :hover {
-    background-color: #d7d7d752;
+    background-color: #d7d7d77a;
     border-radius: 7px;
   }
 `;

@@ -67,7 +67,7 @@ const CarouselWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 480px;
 `;
 
 const Image = styled.img`
