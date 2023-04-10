@@ -11,4 +11,4 @@ export const image2 =
   'https://vejario.abril.com.br/wp-content/uploads/2023/04/1-14.jpg?quality=70&strip=info&w=900&h=600&crop=1'; 
 
 export const image3 = 
-  'https://bropenbadge.com/wp-content/uploads/2019/10/Afinal-o-que-%C3%A9-Blockchain-1024x560.jpg';  
+  'https://bropenbadge.com/wp-content/uploads/2019/10/Afinal-o-que-%C3%A9-Blockchain-1024x560.jpg';
