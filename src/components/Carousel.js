@@ -11,19 +11,21 @@ const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const handleBallClick = (index) => {
+  const handleBallClick = index => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentImageIndex(index);
       setIsTransitioning(false);
     }, 400);
   };
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % images.length);
+        setCurrentImageIndex(
+          currentImageIndex => (currentImageIndex + 1) % images.length,
+        );
         setIsTransitioning(false);
       }, 400);
     }, 5000);
@@ -32,8 +34,8 @@ const Carousel = () => {
 
   return (
     <CarouselWrapper>
-      <ImageWrapper> 
-        <Overlay>  
+      <ImageWrapper>
+        <Overlay>
           <Image
             src={images[currentImageIndex].src}
             alt={images[currentImageIndex].alt}
@@ -41,7 +43,7 @@ const Carousel = () => {
           />
         </Overlay>
         <Caption>{images[currentImageIndex].caption}</Caption>
-      </ImageWrapper>   
+      </ImageWrapper>
       <BallList>
         {images.map((image, index) => (
           <Ball
@@ -68,6 +70,10 @@ const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 480px;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const Image = styled.img`
@@ -75,7 +81,7 @@ const Image = styled.img`
   height: 100%;
   border-radius: 10px;
   transition: opacity 0.5s ease-in-out;
-  opacity: ${({ isTransitioning }) => isTransitioning ? 0 : 1};
+  opacity: ${({ isTransitioning }) => (isTransitioning ? 0 : 1)};
   filter: brightness(60%);
   object-fit: cover;
 `;
@@ -86,7 +92,7 @@ const Overlay = styled.div`
   border-radius: 10px;
   width: 100%;
   height: 100%;
-`
+`;
 
 const Caption = styled.div`
   position: absolute;
@@ -97,6 +103,12 @@ const Caption = styled.div`
   font-size: 40px;
   font-weight: 600;
   letter-spacing: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
 `;
 
 const BallList = styled.ul`

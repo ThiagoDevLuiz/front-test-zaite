@@ -4,22 +4,22 @@ import Carousel from './components/Carousel';
 import Header from './components/Header';
 import News from './components/News';
 import Footer from './components/Footer';
-import Api from './services/Api';
-import { useEffect } from 'react';
-import axios from 'axios';
+// import Api from './services/Api';
+// import { useEffect } from 'react';
+// import axios from 'axios';
 
 function App() {
-  const getToken = async () => {
-    const response = await axios.post("http://zaite.com.br/test/api/v1/auth", {
-      username: 'admin',
-      password: '12345',
-    });
-    console.log(response)
-  };
+  // const getToken = async () => {
+  //   const response = await axios.post("http://zaite.com.br/test/api/v1/auth", {
+  //     username: 'admin',
+  //     password: '12345',
+  //   });
+  //   console.log(response)
+  // };
 
-  useEffect(() => {
-    getToken()
-  },[])
+  // useEffect(() => {
+  //   getToken()
+  // },[])
 
   return (
     <div className="App">
