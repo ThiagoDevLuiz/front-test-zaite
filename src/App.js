@@ -48,10 +48,14 @@ export default App;
 const TextContainer = styled.div`
   width: 85%;
   margin: 40px auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const TextZaite = styled.p`
   color: #6a6b70f5;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
 `;

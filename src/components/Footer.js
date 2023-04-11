@@ -47,6 +47,10 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   color: #606166fd;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const Newsletter = styled.div`
@@ -55,6 +59,12 @@ const Newsletter = styled.div`
   flex-direction: column;
   gap: 15px;
   font-size: 17px;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 const Input = styled.input`
@@ -71,6 +81,12 @@ const CommandReceive = styled.a`
 const Location = styled.div`
   text-align: right;
   line-height: 25px;
+
+  @media (max-width: 425px) {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14.5px;
+  }
 `;
 
 const LogoFooter = styled.img`

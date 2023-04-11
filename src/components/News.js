@@ -33,4 +33,12 @@ const Title = styled.h2`
 const ListNews = styled.div`
   display: flex;
   gap: 48px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    gap: 20px;
+  }
 `;
