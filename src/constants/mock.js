@@ -29,18 +29,18 @@ export const mockClients = [
     brand: 'https://www.stamaria.com.br/boa-viagem/view/imgs/Logo.webp',
   },
   {
-    id: '346',
-    name: 'Ackta Tecnologia',
-    description:
-      'Desenvolvimento do site da Ackta, empresa de tecnologia de SP',
-    brand: 'http://www.ackta.com.br/public/assets_site/img/ackta_logo.png',
+    id: '77',
+    name: 'Adm Empresarial',
+    description: '',
+    brand:
+      'https://scontent.fcau8-1.fna.fbcdn.net/v/t39.30808-6/299664967_387709426878875_4969568295319383213_n.png?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SvJanj1M6VsAX9Wxedt&_nc_ht=scontent.fcau8-1.fna&oh=00_AfDIB3ZPr_A9gKWaVdyC078VfEWyds7eVPFfZuUrHw9t_A&oe=643ADFF0',
   },
   {
-    id: '6',
-    name: 'ASSERPE',
-    description:
-      'Portal com informações e notícias sobre a associação, contendo fotos, vídeos, downloads, etc. ',
-    brand: 'http://www.asserpe.org.br//assets/imgs/logo.png',
+    id: '98',
+    name: 'Bombeiros',
+    description: '',
+    brand:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bras%C3%A3o_CBM_PE.PNG/155px-Bras%C3%A3o_CBM_PE.PNG',
   },
   {
     id: '221',
