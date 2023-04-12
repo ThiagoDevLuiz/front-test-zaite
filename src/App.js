@@ -4,21 +4,42 @@ import Carousel from './components/Carousel';
 import Header from './components/Header';
 import News from './components/News';
 import Footer from './components/Footer';
-// import Api from './services/Api';
-// import { useEffect } from 'react';
-// import axios from 'axios';
+import Api from './services/Api';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import ClientsList from './components/ClientsList';
 
 function App() {
-  // const getToken = async () => {
-  //   const response = await axios.post("http://zaite.com.br/test/api/v1/auth", {
-  //     username: 'admin',
-  //     password: '12345',
-  //   });
-  //   console.log(response)
-  // };
+  const [clients, setClients] = useState([]);
+
+  const getToken = async () => {
+    const response = await Api.post('/auth', {
+      username: 'admin',
+      password: '12345',
+    });
+    return response.data.access_token;
+  };
+
+  const getData = async token => {
+    const response = await Api.get('/clients', {
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    });
+    return response.data;
+  };
+
+  const initApp = async () => {
+    const token = await getToken();
+    const data = await getData(token);
+    setClients(data);
+  };
+
+  // Toda lógica de pegar a lista de clientes foi implementada porém continuo recebendo Access-Control-Allow-Origin
+  // Para utilizar a api só é necessário descomentar o useEffect abaixo
 
   // useEffect(() => {
-  //   getToken()
+  //   initApp()
   // },[])
 
   return (
@@ -37,6 +58,7 @@ function App() {
           </TextZaite>
         </TextContainer>
         <News />
+        <ClientsList clients={clients} />
       </main>
       <Footer />
     </div>
