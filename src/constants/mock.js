@@ -33,14 +33,14 @@ export const mockClients = [
     name: 'Ackta Tecnologia',
     description:
       'Desenvolvimento do site da Ackta, empresa de tecnologia de SP',
-    brand: 'http://zaite.com.br/arqConteudo/arqProjetos/ackta.png',
+    brand: 'http://www.ackta.com.br/public/assets_site/img/ackta_logo.png',
   },
   {
     id: '6',
     name: 'ASSERPE',
     description:
       'Portal com informações e notícias sobre a associação, contendo fotos, vídeos, downloads, etc. ',
-    brand: 'http://zaite.com.br/arqConteudo/arqProjetos/asserpe.png',
+    brand: 'http://www.asserpe.org.br//assets/imgs/logo.png',
   },
   {
     id: '221',
@@ -50,10 +50,10 @@ export const mockClients = [
       'https://scontent.fcau8-1.fna.fbcdn.net/v/t39.30808-6/316821368_5874724182580461_283949726914837281_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=sDyVzyZMDQEAX-7VVnG&_nc_ht=scontent.fcau8-1.fna&oh=00_AfB2wyCjNhtkoyOltI_PHRHwiQTDga680Hwz7CKtWoz1SQ&oe=643A9931',
   },
   {
-    id: '387',
-    name: 'Condecora',
+    id: '156',
+    name: 'Ferreira Pinto',
     description: '',
-    brand: 'http://zaite.com.br/arqConteudo/arqProjetos/Condecora.jpg',
+    brand: 'https://ferreirapinto.com.br/img/og-image.jpg',
   },
   {
     id: '328',
